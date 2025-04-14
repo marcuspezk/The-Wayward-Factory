@@ -1,0 +1,550 @@
+/* ------------------------------  GENERALE  ------------------------------ */
+
+html {
+    height: 100%;
+}
+
+
+
+
+/* --------------------------------  MAIN  -------------------------------- */
+
+/* --------------  HEADER  -------------- */
+
+header {
+    background-color: white;
+    width: 100%;
+    text-align: center;
+}
+
+
+header .logo-small {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media only screen and (min-width: 300px) {
+    header .logo-small {
+        display: none;
+    }
+}
+
+
+header .logo-big {
+    display: none;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media only screen and (min-width: 300px) {
+    header .logo-big {
+        display: block;
+    }
+}
+
+
+
+
+/* --------------  NAV  -------------- */
+
+nav {
+    background-color: black;
+    height: auto;
+    text-align: center;
+}
+
+
+nav .nav-box {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    max-width: 660px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 25px;
+    font-style: oblique;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+
+
+nav .nav-text {
+    text-decoration: none;
+    color: white;
+    display: none
+}
+@media only screen and (min-width: 430px) {
+    nav .nav-text {
+        display: block;
+    }
+}
+
+
+nav a {
+    display: contents;
+}
+@media only screen and (min-width: 430px) {
+    nav a {
+        display: none;
+    }
+}
+nav a:hover {
+    color: rgb(221, 217, 214);
+}
+
+
+nav .nav-icon {
+    background-color: transparent;
+    height: 20px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-bottom: 2px;
+}
+@media only screen and (min-width: 430px) {
+    nav .nav-icon {
+        display: none;
+    }
+}
+
+
+nav .lang-nav-icon {
+    background-color: transparent;
+    height: 18px;
+    padding-left: 6px;
+    padding-right: 6px;
+    transform: translate(0px, 3px);
+}
+@media only screen and (max-width: 430px) {
+    nav .lang-nav-icon {
+        display: none;
+    }
+}
+
+
+
+
+/* --------------  MAIN  -------------- */
+
+/* -------------- MAIN / CAROUSEL -------------- */
+
+.carousel {
+    overflow: hidden;
+    padding: 25px 0px;
+    white-space: nowrap;
+    position: relative;
+    font-weight: bolder;
+}
+@media only screen and (max-width: 400px) {
+    .carousel {
+        padding: 15px 0px;
+    }
+}
+.carousel:before, .carousel:after {
+    position: absolute;
+    top: 0;
+    content: '';
+    width: 50px;
+    height: 100%;
+    z-index: 2;
+}  
+.carousel:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0), rgb(255, 255, 255));
+}
+ @media only screen and (max-width: 670px) {
+    .carousel:before {
+        background: linear-gradient(to left, rgba(255,255,255,0), rgb(221, 212, 204));
+    }
+}
+.carousel:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgb(255, 255, 255));
+}  
+@media only screen and (max-width: 670px) {
+    .carousel:after {
+        background: linear-gradient(to right, rgba(255,255,255,0), rgb(221, 212, 204));
+    }
+}
+.carousel:hover .carousel_items {
+    animation-play-state: paused;
+}
+ 
+
+.carousel_items {
+    display: inline-block;
+    animation: 30s slides infinite linear;
+}
+@keyframes slides {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}
+
+
+.carousel_items img{
+    height: 100px;
+}
+
+
+
+
+/* -------------- MAIN / BODY -------------- */
+
+body {
+    background-color: rgb(179, 171, 161);
+    width: 100%;
+    margin: 0px; /*elimina margine automatico di 5px in Firefox e altri browser*/
+}
+
+
+main {
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    text-align: left;
+}
+@media only screen and (max-width: 670px) {
+    main {
+        background-color: rgb(221, 212, 204);
+    }
+}
+
+
+main h1 {
+    font-size: large;
+    padding-bottom: 5px;
+}
+@media only screen and (min-width: 400px) {
+    main h1 {
+        font-size: x-large;
+        padding: 35px;
+    }
+}
+
+
+main h2 {
+    font-size: small;
+    font-weight: normal;
+    padding-bottom: 5px;
+}
+@media only screen and (min-width: 400px) {
+    main h2 {
+        font-size: medium;
+        font-weight: normal;
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-bottom: 20px;
+    }
+}
+
+
+main p {
+    font-size: small;
+    margin: 0%;
+}
+@media only screen and (min-width: 400px) {
+    main p {
+        font-size: medium;
+        margin: 0%;
+    }
+}
+
+
+main .text-link {
+    text-decoration: none;
+    font-size: small;
+    color: black;
+    font-weight: normal;
+}
+@media only screen and (min-width: 400px) {
+    main .text-link {
+        font-size: medium;
+    }
+}
+
+
+
+
+/* --------------  MAIN / GALLERY  -------------- */
+
+main .gallery {
+    background-color: transparent;
+    width: 100%;
+    height: auto; /*step 1/3 per galleria con elementi dinamici*/
+    text-align: center; /*step 2/3 per galleria con elementi dinamici (centra le immagini)*/
+}
+
+
+main .gallery-item {
+    background-color: transparent;
+    max-width: 300px;
+    margin: 10px;
+    display: inline-block; /*step 3/3 per galleria con elementi dinamici*/   
+}
+
+
+main .img-gallery {
+    width: 100%;
+}
+
+
+
+
+/* --------------  MAIN / DISCOVER-BOX -------------- */
+
+main .discover-box {
+    background-image: url(images/box-image.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border: 1.5px solid black;
+    width: 96.5%;
+    height: auto;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+main .discover-box h2 {
+    font-size: medium;
+    font-weight: normal;
+    padding-bottom: 5px;
+    padding-left: 25px;
+}
+@media only screen and (min-width: 400px) {
+    main h2 {
+        font-size: medium;
+        font-weight: normal;
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-bottom: 20px;
+    }
+}
+
+
+main .discover-box li {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+
+main .discover-box a {
+    color: white;
+}
+main .discover-box a:hover {
+    color: rgb(221, 217, 214);
+}
+
+
+main .contact-me {
+    background-color: white;
+    border: 1.5px solid black;
+    width: 96.5%;
+    height: auto;
+    display: block;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+main .contact-me:hover {
+    background-color: rgb(243, 241, 239);
+}
+@media only screen and (min-width: 670px) {
+    main .contact-me {
+        background-color: rgb(221, 212, 204);
+    }
+    main .contact-me:hover {
+        background-color: rgb(211, 201, 193);
+    }
+}
+
+
+
+
+/* --------------  MAIN / FORM-BOX -------------- */
+
+.form-box {
+    width: 100%;
+    height: auto;
+    color: black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+main .form-item {
+    max-width: 300px;
+    height: auto;
+    display: inline-block; /*step 3/3 per galleria con elementi dinamici*/ 
+}
+
+
+main .form-item img {
+    width: 100%;
+}
+
+
+main .form-item form {   
+    width: 300px;
+}
+@media only screen and (max-width: 630px) and (min-width: 581px) {
+    main .form-item form  {
+        width: 250px;
+    }
+}
+@media only screen and (max-width: 580px) and (min-width: 529px) {
+    main .form-item form  {
+        width: 200px;
+    }
+}
+@media only screen and (max-width: 528px) and (min-width: 321px) {
+    main .form-item form  {
+        padding-top: 20px;
+        width: 300px;
+    }
+}
+@media only screen and (max-width: 320px) and (min-width: 271px) {
+    main .form-item form  {
+        width: 250px;
+    }
+}
+@media only screen and (max-width: 270px) {
+    main .form-item form  {
+        width: 100%;
+    }
+}
+
+
+
+main .form-item .form-input {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    background-color: white;
+    border: 1.5px solid black;
+    width: 92%;
+    height: 25px;
+    display: block;
+    text-align: left;
+    color: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+main .form-item .form-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    background-color: white;
+    border: 1.5px solid black;
+    width: 92%;
+    height: 80px;
+    max-width: 92%;
+    min-width: 92%;
+    max-height: 80px;
+    min-height: 80px;
+    display: block;
+    text-align: left;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+main .form-item button {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border: 1.5px solid black;
+    width: 50%;
+    height: 40px;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+main .form-item button:hover {
+    cursor: pointer;
+    background-color: rgb(26, 26, 26);
+}
+
+
+
+
+/* --------------  FOOTER  -------------- */
+
+footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 15px;
+    line-height: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 25px;
+}
+
+
+footer .footer-link {
+    background-color: transparent;
+    text-decoration: none;
+    color: white;
+}
+
+
+footer .footer-icon {
+    background-color: transparent;
+    height: 24px;
+    width: 24px;
+    padding-right: 10px;
+}
+
+
+footer .social-box {
+    margin-top: 20px;
+}
+
+
+footer p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
